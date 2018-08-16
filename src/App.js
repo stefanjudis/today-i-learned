@@ -11,6 +11,7 @@ import Header from './components/header.js';
 // route components
 import Home from './components/home.js';
 import Post from './components/post.js';
+import Tutorial from './components/tutorial.js';
 import NotFound from './components/404.js';
 
 const App = ({ data }) => (
@@ -22,8 +23,9 @@ const App = ({ data }) => (
       <Container>
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} data={data} />
-          <Route path="/posts/:slug" component={Post} data={data} />
+          <Route exact path="/" component={Home} />
+          <Route path="/posts/:slug" component={Post} />
+          <Route path="/tutorial" component={Tutorial} />
           <Route component={NotFound} />
         </Switch>
       </Container>

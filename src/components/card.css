@@ -1,4 +1,5 @@
 .c-card {
-  box-shadow: 0 0.5em 5em #ddd;
+  box-shadow: 0 1em 5em -0.5em #ddd;
+  border-radius: 0.25em;
   padding: 2em;
 }
