@@ -32,6 +32,7 @@
   line-height: 1;
   letter-spacing: 0.375px;
   transition: transform 0.125s ease-in-out;
+  text-shadow: 0 1px 0.5px #555;
 }
 
 .o-btn:hover {
