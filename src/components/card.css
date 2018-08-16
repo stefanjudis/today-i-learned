@@ -19,7 +19,7 @@
   width: 100%;
 
   background: transparent;
-  box-shadow: 0 1em 5em -0.5em #ccc;
+  box-shadow: 0 1em 5em -0.5em #bbb;
   transition: transform 0.125s ease-in-out;
 }
 
@@ -37,5 +37,5 @@
 }
 
 .c-card:hover::before {
-  transform: scaleX(0.99) translate(0, -0.5em);
+  transform: scaleX(0.98) translate(0, -0.75em);
 }
