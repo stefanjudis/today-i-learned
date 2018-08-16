@@ -1,5 +1,41 @@
 .c-card {
-  box-shadow: 0 1em 5em -0.5em #ddd;
-  border-radius: 0.25em;
+  position: relative;
   padding: 2em;
+  transition: transform 0.125s ease-in-out;
+}
+
+.c-card::before,
+.c-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+}
+
+.c-card::before {
+  top: 1em;
+  left: 0;
+  height: calc(100% - 2em);
+  width: 100%;
+
+  background: transparent;
+  box-shadow: 0 1em 5em -0.5em #ccc;
+  transition: transform 0.125s ease-in-out;
+}
+
+.c-card::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.c-card:hover {
+  transform: translate(0, -2px);
+}
+
+.c-card:hover::before {
+  transform: scaleX(0.99) translate(0, -0.5em);
 }

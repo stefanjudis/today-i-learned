@@ -1,0 +1,17 @@
+.c-placeholder {
+  background: transparent;
+  transition: background 0.25s ease-in-out;
+}
+
+.c-placeholder > * {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.c-placeholder--loading {
+  background: #eee;
+}
+
+.c-placeholder--loading > * {
+  opacity: 0;
+}

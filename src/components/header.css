@@ -1,9 +1,11 @@
 .c-header {
   padding: 1em 0;
+  border-bottom: 1px solid #eee;
 }
 
 .c-header__nav {
   display: flex;
+  align-items: center;
 }
 
 .c-header__button {

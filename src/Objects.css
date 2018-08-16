@@ -9,7 +9,7 @@
 
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   grid-template-rows: 1fr;
-  grid-gap: 1.5em;
+  grid-gap: 2em;
 }
 
 .o-grid li {
@@ -22,9 +22,19 @@
  */
 .o-btn {
   background: #2985ac;
+  background: linear-gradient(to right, #2985ac 0%, #2d9dbc 100%);
   color: #fff;
-  padding: 1em;
+  padding: 0.75em 1em;
   border: none;
-  box-shadow: 0 0.125em 0.25em #888;
-  border-radius: 0.25em;
+  box-shadow: 0 0.25em 1.5em #bbb;
+  border-radius: 1em;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.375px;
+  transition: transform 0.125s ease-in-out;
+}
+
+.o-btn:hover {
+  transform: translate(0, -1px);
+  box-shadow: 0 0.125em 0.75em #bbb;
 }
