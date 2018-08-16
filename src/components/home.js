@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 import getClient from '../lib/get-contentful-client.js';
 import { storeState, getStoredState } from '../lib/store-state.js';
 
+import Card from './card.js';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -54,12 +56,14 @@ class Home extends Component {
             <title>Today I learned</title>
           </Helmet>
           <h1>Today I learned</h1>
-          <ul>
+          <ul className="o-grid">
             {items.map(({ sys, fields }) => (
               <li key={sys.id}>
-                <Link to={`/posts/${fields.slug}/`}>{fields.title}</Link>
-                <br />
-                {fields.publishDate}
+                <Card>
+                  <Link to={`/posts/${fields.slug}/`}>{fields.title}</Link>
+                  <br />
+                  {fields.publishDate}
+                </Card>
               </li>
             ))}
           </ul>

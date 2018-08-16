@@ -7,6 +7,7 @@
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.4.1",
+    "react-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "react-snap": "^1.10.1"
   },

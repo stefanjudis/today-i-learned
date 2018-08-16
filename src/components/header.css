@@ -1,0 +1,11 @@
+.c-header {
+  padding: 1em 0;
+}
+
+.c-header__nav {
+  display: flex;
+}
+
+.c-header__button {
+  margin-left: auto;
+}

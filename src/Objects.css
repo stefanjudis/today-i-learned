@@ -1,0 +1,30 @@
+/**
+ * Grid stuff
+ */
+.o-grid {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 1.5em;
+}
+
+.o-grid li {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * buttons
+ */
+.o-btn {
+  background: #2985ac;
+  color: #fff;
+  padding: 1em;
+  border: none;
+  box-shadow: 0 0.125em 0.25em #888;
+  border-radius: 0.25em;
+}
