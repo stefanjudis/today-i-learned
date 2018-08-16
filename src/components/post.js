@@ -3,44 +3,51 @@ import ReactMarkdown from 'react-markdown';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import getClient from '../lib/get-contentful-client.js';
+import { storeState, CACHE_KEY } from '../lib/store-state.js';
 
 class Post extends Component {
   constructor(props) {
     super(props);
     const { match } = props;
 
-    this.state = {
+    this.state = window[CACHE_KEY] || {
       error: null,
       isLoaded: false,
       post: null,
       slug: match.params.slug
     };
+
+    // needed for react-snap
+    window.snapSaveState = () => {
+      storeState(this.state);
+    };
   }
 
   componentDidMount() {
-    getClient(process.env)
-      .getEntries({
-        content_type: 'post',
-        'fields.slug': this.state.slug
-      })
-      .then(({ items }) => {
-        if (items[0]) {
+    this.state.isLoaded ||
+      getClient(process.env)
+        .getEntries({
+          content_type: 'post',
+          'fields.slug': this.state.slug
+        })
+        .then(({ items }) => {
+          if (items[0]) {
+            this.setState({
+              post: items[0],
+              isLoaded: true
+            });
+          } else {
+            this.setState({
+              error: new Error('Not found')
+            });
+          }
+        })
+        .catch(error => {
           this.setState({
-            post: items[0],
+            error,
             isLoaded: true
           });
-        } else {
-          this.setState({
-            error: new Error('Not found')
-          });
-        }
-      })
-      .catch(error => {
-        this.setState({
-          error,
-          isLoaded: true
         });
-      });
   }
 
   render() {

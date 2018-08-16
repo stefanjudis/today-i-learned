@@ -2,34 +2,41 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import getClient from '../lib/get-contentful-client.js';
+import { storeState, CACHE_KEY } from '../lib/store-state.js';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = window[CACHE_KEY] || {
       error: null,
       isLoaded: false,
       items: []
     };
+
+    // needed for react-snap
+    window.snapSaveState = () => {
+      storeState(this.state);
+    };
   }
 
   componentDidMount() {
-    getClient(process.env)
-      .getEntries({
-        content_type: 'post'
-      })
-      .then(({ items }) => {
-        this.setState({
-          items,
-          isLoaded: true
+    this.state.isLoaded ||
+      getClient(process.env)
+        .getEntries({
+          content_type: 'post'
+        })
+        .then(({ items }) => {
+          this.setState({
+            items,
+            isLoaded: true
+          });
+        })
+        .catch(error => {
+          this.setState({
+            error,
+            isLoaded: true
+          });
         });
-      })
-      .catch(error => {
-        this.setState({
-          error,
-          isLoaded: true
-        });
-      });
   }
 
   render() {

@@ -1,7 +1,6 @@
 {
   "name": "cf-netlify-contentful-react-client-side-example",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "dependencies": {
     "contentful": "^7.0.0",
     "react": "^16.4.2",
