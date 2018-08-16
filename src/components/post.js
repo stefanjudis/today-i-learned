@@ -3,14 +3,14 @@ import ReactMarkdown from 'react-markdown';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import getClient from '../lib/get-contentful-client.js';
-import { storeState, CACHE_KEY } from '../lib/store-state.js';
+import { storeState, getStoredState } from '../lib/store-state.js';
 
 class Post extends Component {
   constructor(props) {
     super(props);
     const { match } = props;
 
-    this.state = window[CACHE_KEY] || {
+    this.state = getStoredState() || {
       error: null,
       isLoaded: false,
       post: null,

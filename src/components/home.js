@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import getClient from '../lib/get-contentful-client.js';
-import { storeState, CACHE_KEY } from '../lib/store-state.js';
+import { storeState, getStoredState } from '../lib/store-state.js';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = window[CACHE_KEY] || {
+
+    this.state = getStoredState() || {
       error: null,
       isLoaded: false,
       items: []
