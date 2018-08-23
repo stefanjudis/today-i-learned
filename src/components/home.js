@@ -5,6 +5,7 @@ import getClient from '../lib/get-contentful-client.js';
 import { storeState, getStoredState } from '../lib/store-state.js';
 
 import Card from './card.js';
+import Date from './date.js';
 
 class Home extends Component {
   constructor(props) {
@@ -53,16 +54,25 @@ class Home extends Component {
       return (
         <div>
           <Helmet>
-            <title>Today I learned</title>
+            <title>Today I learned | Home</title>
           </Helmet>
           <h1>Today I learned</h1>
+
+          <Card>
+            <h2>What is this?</h2>
+            <p>jojojo</p>
+          </Card>
+
+          <h2>Learnings</h2>
           <ul className="o-grid">
             {items.map(({ sys, fields }) => (
               <li key={sys.id}>
                 <Card>
-                  <Link to={`/posts/${fields.slug}/`}>{fields.title}</Link>
+                  <Date dateString={fields.publishDate} />
+                  <Link to={`/posts/${fields.slug}/`}>
+                    <h2>{fields.title}</h2>
+                  </Link>
                   <br />
-                  {fields.publishDate}
                 </Card>
               </li>
             ))}

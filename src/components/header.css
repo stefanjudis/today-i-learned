@@ -3,6 +3,10 @@
   border-bottom: 1px solid #eee;
 }
 
+.c-header__title {
+  font-size: 1.5em;
+}
+
 .c-header__nav {
   display: flex;
   align-items: center;

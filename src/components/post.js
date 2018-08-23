@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
+import Skeleton from 'react-loading-skeleton';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Card from './card.js';
+import Date from './date.js';
 import Container from './container.js';
-import Placeholder from './placeholder.js';
 import getClient from '../lib/get-contentful-client.js';
 import { storeState, getStoredState } from '../lib/store-state.js';
 
@@ -16,13 +17,7 @@ class Post extends Component {
     this.state = getStoredState() || {
       error: null,
       isLoading: true,
-      post: {
-        fields: {
-          publishDate: '\u200B',
-          title: '\u200B',
-          body: '\u200B \n\b\r\n \u200B \n \u200B \n \u200B'
-        }
-      },
+      post: { fields: {} },
       slug: match.params.slug
     };
 
@@ -77,20 +72,22 @@ class Post extends Component {
       return (
         <div>
           <Helmet>
-            <title>{`${fields.title} – Today I Learned`}</title>
+            <title>{`${fields.title} | Today I Learned`}</title>
           </Helmet>
           <Link to="/">Home</Link>
           <Container isSmall={true}>
             <Card>
-              <Placeholder isLoading={this.state.isLoading}>
-                <time>{fields.publishDate}</time>
-              </Placeholder>
-              <Placeholder isLoading={this.state.isLoading}>
-                <h1>{fields.title}</h1>
-              </Placeholder>
-              <Placeholder isLoading={this.state.isLoading}>
+              {fields.publishDate ? (
+                <Date dateString={fields.publishDate} />
+              ) : (
+                <Skeleton />
+              )}
+              <h1>{fields.title || <Skeleton />}</h1>
+              {fields.body ? (
                 <ReactMarkdown source={fields.body} />
-              </Placeholder>
+              ) : (
+                <Skeleton count="5" />
+              )}
             </Card>
           </Container>
         </div>

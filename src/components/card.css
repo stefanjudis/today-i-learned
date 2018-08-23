@@ -9,7 +9,7 @@
   content: '';
   position: absolute;
   z-index: -1;
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 .c-card::before {

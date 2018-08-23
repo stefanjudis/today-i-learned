@@ -1,9 +1,22 @@
 body,
 html {
   height: 100%;
+
+  --color-body: #555;
+  --color-headlines: #333;
 }
 
 body {
   background: #fcfcfd;
-  color: #333;
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-decoration: none;
+  color: var(--color-headlines);
+  font-weight: 500;
+  margin: 0.25em 0 0.5em;
 }
