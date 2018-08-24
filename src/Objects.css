@@ -44,3 +44,15 @@
   transform: translate(0, -1px);
   box-shadow: 0 0.125em 0.75em #bbb;
 }
+
+.o-gradient-css {
+  background: linear-gradient(to right, #692873 0%, #bf3265 100%);
+}
+
+.o-gradient-html {
+  background: linear-gradient(to right, #7ed8b8 0%, #19b9e5 100%);
+}
+
+.o-gradient-javascript {
+  background: linear-gradient(to right, #fad088 0%, #f48782 100%);
+}

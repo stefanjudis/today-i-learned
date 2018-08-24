@@ -1,6 +1,7 @@
 body,
 html {
   height: 100%;
+  font-size: 100%;
 
   --color-body: #555;
   --color-headlines: #444;
@@ -23,7 +24,7 @@ h4 {
 
 h1.centered,
 h2.centered {
-  padding: 1em 0 0.5em;
+  padding: 1.5em 0 1em;
   text-align: center;
 }
 

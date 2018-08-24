@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import Skeleton from 'react-loading-skeleton';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { Card } from './card.js';
+import { Card, CardBorder } from './card.js';
 import Date from './date.js';
 import Container from './container.js';
 import getClient from '../lib/get-contentful-client.js';
@@ -70,6 +70,7 @@ class Post extends Component {
     } else {
       const { fields } = post;
 
+      console.log(fields);
       return (
         <div>
           <Helmet>
@@ -78,6 +79,13 @@ class Post extends Component {
           <Link to="/">Home</Link>
           <Container isSmall={true}>
             <Card>
+              {fields.category ? (
+                <CardBorder
+                  className={`o-gradient-${fields.category.fields.slug}`}
+                />
+              ) : (
+                ''
+              )}
               {fields.publishDate ? (
                 <Date dateString={fields.publishDate} />
               ) : (

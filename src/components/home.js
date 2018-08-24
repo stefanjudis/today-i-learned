@@ -81,7 +81,7 @@ class Home extends Component {
               ([categorySlug, { category, posts }]) => (
                 <li key={categorySlug}>
                   <Card>
-                    <CardHeader className={categorySlug}>
+                    <CardHeader className={`o-gradient-${categorySlug}`}>
                       {category.fields.title}
                       <img
                         aria-hidden="true"

@@ -61,14 +61,11 @@
   height: 1.5em;
 }
 
-.c-cardHeader.css {
-  background: linear-gradient(to right, #692873 0%, #bf3265 100%);
-}
-
-.c-cardHeader.html {
-  background: linear-gradient(to right, #7ed8b8 0%, #19b9e5 100%);
-}
-
-.c-cardHeader.javascript {
-  background: linear-gradient(to right, #fad088 0%, #f48782 100%);
+.c-cardBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.5em;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
