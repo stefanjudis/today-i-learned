@@ -72,7 +72,17 @@ class Home extends Component {
 
           <Card>
             <h2>What is this?</h2>
-            <p>jojojo</p>
+            <p>
+              Web development and being a "programmer" can often feel
+              overwhelming. The amount of information out there is very
+              intimidating and especially when you're entering the industry it's
+              very easy to feel that you're not improving.
+            </p>
+            <p>
+              Writing it downs helps. With this repository you can easily start
+              building a central place to feel the progress. And if you like to
+              share it, too, because nobody knows everything.
+            </p>
           </Card>
 
           <h2 className="centered">Learnings</h2>
@@ -80,7 +90,7 @@ class Home extends Component {
             {Object.entries(categories).map(
               ([categorySlug, { category, posts }]) => (
                 <li key={categorySlug}>
-                  <Card>
+                  <Card limited={true}>
                     <CardHeader className={`o-gradient-${categorySlug}`}>
                       {category.fields.title}
                       <img

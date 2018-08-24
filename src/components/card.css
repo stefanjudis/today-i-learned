@@ -1,4 +1,6 @@
 .c-card {
+  max-width: 35em;
+  margin: 0 auto;
   position: relative;
   padding: 2em;
   transition: transform 0.125s ease-in-out;
