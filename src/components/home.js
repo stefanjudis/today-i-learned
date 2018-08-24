@@ -62,7 +62,6 @@ class Home extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-      console.log(Object.entries(categories));
       return (
         <div>
           <Helmet>

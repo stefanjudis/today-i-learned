@@ -17,8 +17,6 @@ import Post from './components/post.js';
 import Tutorial from './components/tutorial.js';
 import NotFound from './components/404.js';
 
-const initialState = getStoredState();
-
 const App = ({ data }) => (
   <Router>
     <div>
@@ -31,16 +29,18 @@ const App = ({ data }) => (
           <Route
             exact
             path="/"
-            render={_ => <Home initialState={initialState} />}
+            render={_ => <Home initialState={getStoredState()} />}
           />
           <Route
             path="/posts/:slug"
-            render={props => <Post {...props} initialState={initialState} />}
+            render={props => (
+              <Post {...props} initialState={getStoredState()} />
+            )}
           />
           <Route
             path="/tutorial"
             render={props => (
-              <Tutorial {...props} initialState={initialState} />
+              <Tutorial {...props} initialState={getStoredState()} />
             )}
           />
           <Route component={NotFound} />

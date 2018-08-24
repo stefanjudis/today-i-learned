@@ -70,7 +70,6 @@ class Post extends Component {
     } else {
       const { fields } = post;
 
-      console.log(fields);
       return (
         <div>
           <Helmet>
