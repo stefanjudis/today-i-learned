@@ -75,11 +75,11 @@ class Home extends Component {
               Web development and being a "programmer" can often feel
               overwhelming. The amount of information out there is very
               intimidating and especially when you're entering the industry it's
-              very easy to feel that you're not improving.
+              very easy to feel lost and not improving at all.
             </p>
             <p>
-              Writing it downs helps. With this repository you can easily start
-              building a central place to feel the progress. And if you like to
+              Writing it downs helps. With this project you can easily start
+              building a central place to see your progress. And if you like to
               share it, too, because nobody knows everything.
             </p>
           </Card>

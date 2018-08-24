@@ -3,6 +3,9 @@ import ReactMarkdown from 'react-markdown';
 import Skeleton from 'react-loading-skeleton';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+
+import './post.css';
+
 import { Card, CardBorder } from './card.js';
 import Date from './date.js';
 import Container from './container.js';
@@ -71,7 +74,7 @@ class Post extends Component {
       const { fields } = post;
 
       return (
-        <div>
+        <div className="c-post">
           <Helmet>
             <title>{`${fields.title} | Today I Learned`}</title>
           </Helmet>
