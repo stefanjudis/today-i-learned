@@ -3,7 +3,7 @@ html {
   height: 100%;
 
   --color-body: #555;
-  --color-headlines: #333;
+  --color-headlines: #444;
 }
 
 body {
@@ -19,4 +19,24 @@ h4 {
   color: var(--color-headlines);
   font-weight: 500;
   margin: 0.25em 0 0.5em;
+}
+
+h1.centered,
+h2.centered {
+  padding: 1em 0 0.5em;
+  text-align: center;
+}
+
+a {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+
+ul li {
+  padding: 0.25em 0;
 }

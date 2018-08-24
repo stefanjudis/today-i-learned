@@ -2,6 +2,8 @@
   position: relative;
   padding: 2em;
   transition: transform 0.125s ease-in-out;
+
+  --border-radius: 0.5rem;
 }
 
 .c-card::before,
@@ -9,7 +11,7 @@
   content: '';
   position: absolute;
   z-index: -1;
-  border-radius: 0.5em;
+  border-radius: var(--border-radius);
 }
 
 .c-card::before {
@@ -38,4 +40,35 @@
 
 .c-card:hover::before {
   transform: scaleX(0.98) translate(0, -0.75em);
+}
+
+.c-cardHeader {
+  display: flex;
+  align-items: center;
+  margin: -1.333em -1.333em 1em;
+  padding: 1em 1.333em;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  overflow: hidden;
+  color: #fff;
+  text-shadow: 0 1px 0.5px #444;
+  box-shadow: 0 -0.25em 0.25em -0.25em inset #666;
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+.c-cardHeader img {
+  margin-left: auto;
+  height: 1.5em;
+}
+
+.c-cardHeader.css {
+  background: linear-gradient(to right, #692873 0%, #bf3265 100%);
+}
+
+.c-cardHeader.html {
+  background: linear-gradient(to right, #7ed8b8 0%, #19b9e5 100%);
+}
+
+.c-cardHeader.javascript {
+  background: linear-gradient(to right, #fad088 0%, #f48782 100%);
 }

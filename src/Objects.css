@@ -12,7 +12,7 @@
   grid-gap: 2em;
 }
 
-.o-grid li {
+.o-grid > li {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -37,7 +37,7 @@
   line-height: 1;
   letter-spacing: 0.375px;
   transition: transform 0.125s ease-in-out;
-  text-shadow: 0 1px 0.5px #555;
+  text-shadow: 0 1px 0.5px #444;
 }
 
 .o-btn:hover {

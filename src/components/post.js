@@ -3,18 +3,19 @@ import ReactMarkdown from 'react-markdown';
 import Skeleton from 'react-loading-skeleton';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Card from './card.js';
+import { Card } from './card.js';
 import Date from './date.js';
 import Container from './container.js';
 import getClient from '../lib/get-contentful-client.js';
-import { storeState, getStoredState } from '../lib/store-state.js';
+import { storeState } from '../lib/store-state.js';
 
 class Post extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     const { match } = props;
 
-    this.state = getStoredState() || {
+    this.state = props.initialState || {
       error: null,
       isLoading: true,
       post: { fields: {} },
