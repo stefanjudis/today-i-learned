@@ -6,3 +6,8 @@
   border: 1px solid #ffa6a9;
   border-radius: 0.5em;
 }
+
+.c-msg__headline {
+  font-size: 1.35em;
+  text-align: center;
+}

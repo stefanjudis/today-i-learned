@@ -4,7 +4,15 @@ import './successMsg.css';
 export default () => {
   return (
     <div role="alert" className="c-msg">
-      <p>You're now set! But wait...</p>
+      <h3 className="c-msg__headline">
+        <span role="img" aria-label="Party popper">
+          🎉
+        </span>
+        You're now set! But wait...
+        <span role="img" aria-label="Party popper">
+          🎉
+        </span>
+      </h3>
       <p>There are a few things to clean up first:</p>
       <ul>
         <li>
