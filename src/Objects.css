@@ -45,11 +45,22 @@
   box-shadow: 0 0.125em 0.75em #bbb;
 }
 
+.o-btn:active,
+.o-btn:focus {
+  color: #fff;
+}
+
+.o-paddedLink {
+  display: inline-block;
+  padding: 1em;
+}
+
 .o-gradient-css {
   background: linear-gradient(to right, #bf3265 0%, #692873 100%);
 }
 
-.o-gradient-html {
+.o-gradient-html,
+.o-gradient-tutorial {
   background: linear-gradient(to right, #7ed8b8 0%, #19b9e5 100%);
 }
 

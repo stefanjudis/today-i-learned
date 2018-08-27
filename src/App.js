@@ -14,10 +14,10 @@ import Header from './components/header.js';
 // route components
 import Home from './components/home.js';
 import Post from './components/post.js';
-import Tutorial from './components/tutorial.js';
+import Page from './components/page';
 import NotFound from './components/404.js';
 
-const App = ({ data }) => (
+const App = () => (
   <Router>
     <div>
       <Helmet>
@@ -38,9 +38,9 @@ const App = ({ data }) => (
             )}
           />
           <Route
-            path="/tutorial"
+            path="/:slug"
             render={props => (
-              <Tutorial {...props} initialState={getStoredState()} />
+              <Page {...props} initialState={getStoredState()} />
             )}
           />
           <Route component={NotFound} />

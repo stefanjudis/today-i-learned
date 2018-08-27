@@ -11,6 +11,7 @@ html {
 
   --color-body: #555;
   --color-headlines: #444;
+  --color-highlight: #2d9dbc;
 }
 
 body {
@@ -37,6 +38,11 @@ h2.centered {
 a {
   color: currentColor;
   text-decoration: underline;
+}
+
+a:focus,
+a:active {
+  color: var(--color-highlight);
 }
 
 ul {

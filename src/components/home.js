@@ -5,6 +5,7 @@ import getClient from '../lib/get-contentful-client.js';
 import { storeState } from '../lib/store-state.js';
 
 import { Card, CardHeader } from './card.js';
+import { Spinner } from './loading.js';
 
 class Home extends Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class Home extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Spinner />;
     } else {
       return (
         <div>

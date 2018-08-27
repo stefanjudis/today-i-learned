@@ -1,18 +1,16 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import Skeleton from 'react-loading-skeleton';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Skeleton from 'react-loading-skeleton';
+import ReactMarkdown from 'react-markdown';
 
-import './post.css';
-
-import SSRComponent from './SSRComponent.js';
-import { Card, CardBorder } from './card.js';
-import Date from './date.js';
-import Container from './container.js';
 import getClient from '../lib/get-contentful-client.js';
 
-class Post extends SSRComponent {
+import SSRComponent from './SSRComponent.js';
+import Container from './container.js';
+import { Card, CardBorder } from './card.js';
+
+class Page extends SSRComponent {
   constructor(props) {
     super(props);
     const { match } = props;
@@ -20,7 +18,7 @@ class Post extends SSRComponent {
     this.state = props.initialState || {
       error: null,
       isLoading: true,
-      post: { fields: {} },
+      page: { fields: {} },
       slug: match.params.slug
     };
   }
@@ -29,13 +27,13 @@ class Post extends SSRComponent {
     this.state.isLoaded ||
       getClient(process.env)
         .getEntries({
-          content_type: 'post',
+          content_type: 'page',
           'fields.slug': this.state.slug
         })
         .then(({ items }) => {
           if (items[0]) {
             this.setState({
-              post: items[0],
+              page: items[0],
               isLoading: false
             });
           } else {
@@ -53,7 +51,7 @@ class Post extends SSRComponent {
   }
 
   render() {
-    const { error, post } = this.state;
+    const { error, page } = this.state;
 
     if (error) {
       return (
@@ -65,7 +63,7 @@ class Post extends SSRComponent {
         />
       );
     } else {
-      const { fields } = post;
+      const { fields } = page;
 
       return (
         <div className="c-post">
@@ -77,18 +75,7 @@ class Post extends SSRComponent {
           </Link>
           <Container isSmall={true}>
             <Card>
-              {fields.category ? (
-                <CardBorder
-                  className={`o-gradient-${fields.category.fields.slug}`}
-                />
-              ) : (
-                ''
-              )}
-              {fields.publishDate ? (
-                <Date dateString={fields.publishDate} />
-              ) : (
-                <Skeleton />
-              )}
+              <CardBorder className={`o-gradient-${fields.slug}`} />
               <h1>{fields.title || <Skeleton />}</h1>
               {fields.body ? (
                 <ReactMarkdown source={fields.body} />
@@ -103,4 +90,4 @@ class Post extends SSRComponent {
   }
 }
 
-export default Post;
+export default Page;
