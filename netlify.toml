@@ -1,0 +1,13 @@
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[template]
+  incoming-hooks = ["Contentful"]
+
+[template.environment]
+  CMA_TOKEN = "Content Management Token to import default data on initial setup"
+  REACT_APP_CTF_SPACE = "The ID of your space"
+  REACT_APP_CTF_CDA_TOKEN = "The CDA token"
+  REACT_APP_CTF_CPA_TOKEN = "The CPA token"

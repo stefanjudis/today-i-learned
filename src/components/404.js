@@ -6,7 +6,6 @@ export default ({ location }) => (
     <Helmet>
       <title>404 - Oh noesss!</title>
     </Helmet>
-    ;
     <h3>
       No match for <code>{location.pathname}</code>
     </h3>
