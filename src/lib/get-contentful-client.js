@@ -4,7 +4,6 @@ export default ({
   REACT_APP_CTF_SPACE: space,
   REACT_APP_CTF_CDA_TOKEN: accessToken,
   REACT_APP_CTF_CPA_TOKEN,
-  REACT_APP_CTF_CMA_TOKEN,
   NODE_ENV
 }) => {
   const config = {
