@@ -1,5 +1,6 @@
 {
   "name": "cf-netlify-contentful-react-client-side-example",
+  "description": "One click project to get started with Contentful and Netlify",
   "version": "1.0.0",
   "dependencies": {
     "contentful": "^7.0.0",
