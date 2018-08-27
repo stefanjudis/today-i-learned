@@ -7,7 +7,7 @@
   incoming-hooks = ["Contentful"]
 
 [template.environment]
-  CONTENTFUL_CMA_TOKEN = "Content Management Token to import default data on initial setup"
-  REACT_APP_CTF_SPACE = "The ID of your space"
-  REACT_APP_CTF_CDA_TOKEN = "The CDA token"
-  REACT_APP_CTF_CPA_TOKEN = "The CPA token"
+  CONTENTFUL_CMA_TOKEN = "Contentful Content Management Token"
+  REACT_APP_CTF_SPACE = "Contentful space ID"
+  REACT_APP_CTF_CDA_TOKEN = "Contentful content delivery token"
+  REACT_APP_CTF_CPA_TOKEN = "Contentful content preview token"
