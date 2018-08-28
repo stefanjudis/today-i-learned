@@ -75,7 +75,7 @@ class Post extends SSRComponent {
           <Link className="o-paddedLink" to="/">
             Go back to Home
           </Link>
-          <Container isSmall={true}>
+          <Container>
             <Card>
               {fields.category ? (
                 <CardBorder
