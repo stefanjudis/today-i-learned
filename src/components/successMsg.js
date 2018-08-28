@@ -19,7 +19,14 @@ export default () => {
       <ul>
         <li>
           <code>REACT_APP_CTF_CMA_TOKEN</code> has to be removed from the
-          Netlify build settings and should be revoked in Contentful
+          Netlify build settings and{' '}
+          <a
+            href={`https://app.contentful.com/spaces/${
+              process.env.REACT_APP_CTF_SPACE
+            }/api/cma_tokens`}
+          >
+            should be revoked in Contentful
+          </a>
         </li>
         <li>
           the defined <code>postinstall</code> script inside of the{' '}
