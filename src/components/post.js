@@ -26,7 +26,7 @@ class Post extends SSRComponent {
   }
 
   componentDidMount() {
-    this.state.isLoaded ||
+    this.state.isLoading ||
       getClient(process.env)
         .getEntries({
           content_type: 'post',
