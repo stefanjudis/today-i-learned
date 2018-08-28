@@ -14,10 +14,12 @@ then
 
   # "Evaluate" space emptiness with querying for a random entry
   # if random entry is not there contentful-import is performed
-  if [ "$RESPONSE_CODE" == "404" ]
+  if [ $RESPONSE_CODE -eq 404 ]
   then
     ./node_modules/.bin/contentful space import --content-file ./contentful/export.json --management-token $REACT_APP_CTF_CMA_TOKEN --space-id $REACT_APP_CTF_SPACE
   else
     echo "It looks like the Contentful space you set is not empty?"
   fi
+else
+  echo "No CMA Token found and/or not running on Netlify... Nothing to do here!"
 fi
