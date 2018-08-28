@@ -11,3 +11,8 @@
   font-size: 1.35em;
   text-align: center;
 }
+
+.c-msg__headline span {
+  display: inline-block;
+  margin: 0 0.5em;
+}

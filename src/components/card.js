@@ -8,5 +8,5 @@ export const CardHeader = ({ className, children }) => (
   <div className={`c-cardHeader ${className}`}>{children}</div>
 );
 export const CardBorder = ({ className }) => (
-  <div class={`c-cardBorder ${className}`} />
+  <div className={`c-cardBorder ${className}`} />
 );

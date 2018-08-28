@@ -8,12 +8,14 @@ export default () => {
         <span role="img" aria-label="Party popper">
           🎉
         </span>
-        You're now set! But wait...
+        You're now set!
         <span role="img" aria-label="Party popper">
           🎉
         </span>
       </h3>
-      <p>There are a few things to clean up first:</p>
+      <p>
+        <strong> But wait...</strong> There are a few things to clean up first:
+      </p>
       <ul>
         <li>
           <code>REACT_APP_CTF_CMA_TOKEN</code> has to be removed from the
@@ -27,11 +29,15 @@ export default () => {
           the script <code>./scripts/setup.sh</code> can be removed
         </li>
         <li>
-          and lastly... the component <code>SuccessMsg</code> used in{' '}
-          <code>./components/App.js</code> has also done its job!
+          and lastly...this component
+          <code>SuccessMsg</code> used in
+          <code>./components/App.js</code> has also done its job and can be
+          removed!
         </li>
       </ul>
-      <p>Have fun!</p>
+      <p>
+        <strong>Have fun!</strong>
+      </p>
     </div>
   );
 };
