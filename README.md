@@ -11,7 +11,7 @@ or ... a **"Netlify Contentful React Static Site example"**
 
 ## How to use set it up
 
-This project can be used without files on any computer simply by configuring Contentful and Netlify.
+This project can be used without files on any computer simply by configuring Contentful and Netlify. The tutorial is [included in the project itself](https://netlify-contentful.netlify.com/tutorial/).
 
 ## How to develop and change it
 
@@ -20,5 +20,3 @@ $ git clone
 $ npm i
 $ mv .env.sample .env
 ```
-
-## Contributing
