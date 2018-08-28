@@ -1,6 +1,6 @@
 # Today I learned (as static site)
 
-## or in long a "Netlify Contentful React Static Site example"
+**or ... a "Netlify Contentful React Static Site example"**
 
 ## Requirements
 
