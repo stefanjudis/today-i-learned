@@ -19,14 +19,14 @@ class Post extends SSRComponent {
 
     this.state = props.initialState || {
       error: null,
-      isLoading: true,
+      isLoaded: false,
       post: { fields: {} },
       slug: match.params.slug
     };
   }
 
   componentDidMount() {
-    this.state.isLoading ||
+    this.state.isLoaded ||
       getClient(process.env)
         .getEntries({
           content_type: 'post',
@@ -36,7 +36,7 @@ class Post extends SSRComponent {
           if (items[0]) {
             this.setState({
               post: items[0],
-              isLoading: false
+              isLoaded: true
             });
           } else {
             this.setState({
@@ -47,7 +47,7 @@ class Post extends SSRComponent {
         .catch(error => {
           this.setState({
             error,
-            isLoading: false
+            isLoaded: true
           });
         });
   }
@@ -59,7 +59,7 @@ class Post extends SSRComponent {
       return (
         <Redirect
           to={{
-            pathname: '/not-found',
+            pathname: '/404',
             state: { from: this.props.location }
           }}
         />

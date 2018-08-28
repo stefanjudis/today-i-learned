@@ -39,13 +39,13 @@ const App = () => (
               <Post {...props} initialState={getStoredState()} />
             )}
           />
+          <Route exact path="/404" component={NotFound} />
           <Route
             path="/:slug"
             render={props => (
               <Page {...props} initialState={getStoredState()} />
             )}
           />
-          <Route component={NotFound} />
         </Switch>
       </Container>
     </div>

@@ -7,7 +7,7 @@ export default ({ location }) => (
       <title>404 - Oh noesss!</title>
     </Helmet>
     <h3>
-      No match for <code>{location.pathname}</code>
+      There's nothing at <code>{location.state.from.pathname}</code>
     </h3>
   </div>
 );

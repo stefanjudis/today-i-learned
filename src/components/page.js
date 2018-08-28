@@ -17,7 +17,7 @@ class Page extends SSRComponent {
 
     this.state = props.initialState || {
       error: null,
-      isLoading: true,
+      isLoaded: false,
       page: { fields: {} },
       slug: match.params.slug
     };
@@ -34,7 +34,7 @@ class Page extends SSRComponent {
           if (items[0]) {
             this.setState({
               page: items[0],
-              isLoading: false
+              isLoaded: true
             });
           } else {
             this.setState({
@@ -45,7 +45,7 @@ class Page extends SSRComponent {
         .catch(error => {
           this.setState({
             error,
-            isLoading: false
+            isLoaded: true
           });
         });
   }
@@ -57,7 +57,7 @@ class Page extends SSRComponent {
       return (
         <Redirect
           to={{
-            pathname: '/not-found',
+            pathname: '/404',
             state: { from: this.props.location }
           }}
         />
