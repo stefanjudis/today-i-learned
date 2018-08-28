@@ -33,11 +33,15 @@ export default () => {
           <code>package.json</code> which imported the content can be removed
         </li>
         <li>
-          the script <code>./scripts/setup.sh</code> can be removed
+          the <code>./scripts</code> directory can be removed including its
+          contents
         </li>
         <li>
-          and lastly...this component
-          <code>SuccessMsg</code> used in
+          the data that was used to bootstrap your new space in{' '}
+          <code>./contentful</code> can also be removed
+        </li>
+        <li>
+          and lastly...this component <code>SuccessMsg</code> used in{' '}
           <code>./components/App.js</code> has also done its job and can be
           removed!
         </li>
