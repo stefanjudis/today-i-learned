@@ -6,8 +6,19 @@ or ... a **"Netlify Contentful React Static Site example"**
 
 ## Requirements
 
+- a [Contentful](https://www.contentful.com) account (as a Content Infrastructure)
+- a [Netlify](https://www.netlify.com) account (as a CI service and hoster)
+
 ## How to use set it up
 
-## How to develop
+This project can be used without files on any computer simply by configuring Contentful and Netlify.
+
+## How to develop and change it
+
+```
+$ git clone
+$ npm i
+$ mv .env.sample .env
+```
 
 ## Contributing
