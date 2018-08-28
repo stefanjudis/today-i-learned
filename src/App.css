@@ -13,7 +13,7 @@ html {
   --color-body: #555;
   --color-headlines: #444;
   --color-highlight: #2d9dbc;
-  --card-max-width: 35em;
+  --card-max-width: 47.5em;
 }
 
 body {
@@ -54,4 +54,8 @@ ul {
 
 ul li {
   padding: 0.25em 0;
+}
+
+img {
+  max-width: 100%;
 }
