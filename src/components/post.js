@@ -3,6 +3,9 @@ import ReactMarkdown from 'react-markdown';
 import Skeleton from 'react-loading-skeleton';
 import { Link, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/themes/prism-okaidia.css';
 
 import './post.css';
 
@@ -50,6 +53,11 @@ class Post extends SSRComponent {
             isLoaded: true
           });
         });
+    Prism.highlightAll();
+  }
+
+  componentDidUpdate() {
+    Prism.highlightAll();
   }
 
   render() {
