@@ -6,6 +6,10 @@ or ... a **"Netlify Contentful React Static Site example"**
 
 ## Features
 
+- included content model for easy setup in Contentful
+- dynamic rendering and usage of the [Contentful Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/) for easier content preview in development
+- static builds for better user experience using [react-snap](https://github.com/stereobooster/react-snap)
+
 ## Requirements
 
 ### [Contentful](https://www.contentful.com) – your Content Infrastructure
@@ -14,7 +18,7 @@ or ... a **"Netlify Contentful React Static Site example"**
 
 ## Setup
 
-### Using the Netlify Deploy Button
+### Using the Netlify Deploy Button (recommended)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stefanjudis/netlify-contentful-react-static-site-example)
 
