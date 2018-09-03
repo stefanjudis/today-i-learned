@@ -21,7 +21,7 @@ Contentful’s content infrastructure is a set of APIs to read, write and previe
 
 ### [Netlify](https://www.netlify.com) – your CI service and hoster
 
-Tbd.
+Netlify enables an all-in-one workflow that combines global deployment, continuous integration, and automatic HTTPS.
 
 ## Project setup and initial deploy using the Netlify Deploy Button
 
