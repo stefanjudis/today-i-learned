@@ -17,23 +17,19 @@ _This project is based on [create-react-app](https://github.com/facebook/create-
 
 ### [Contentful](https://www.contentful.com) – your Content Infrastructure
 
+Contentful’s content infrastructure is a set of APIs to read, write and preview your data combined with [developer friendly CLI tools](https://github.com/contentful/contentful-cli/) and an [extensible web application](https://www.contentful.com/developers/docs/concepts/uiextensions/) to provide a smooth editorial experience. This set of APIs makes it a perfect fit for modern static site generators that are able to consume API data easily.
+
 ### [Netlify](https://www.netlify.com) – your CI service and hoster
 
-## Setup
+Tbd.
 
-### Using the Netlify Deploy Button (recommended)
+## Project setup and initial deploy using the Netlify Deploy Button
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stefanjudis/today-i-learned)
 
-This project can be used without files on any computer simply by configuring Contentful and Netlify. The tutorial is [included in the project itself](https://today-i-learned.netlify.com/tutorial/). Go there and have a look.
+This project can be used without files on any computer simply by configuring Contentful and Netlify. The tutorial is [included in the project itself](https://today-i-learned.netlify.com/tutorial/). Go there and have a look in case you have any questions
 
-### Set everything up yourself (works, too)
-
-## Getting started with development
-
-#### Setup of Contentful
-
-### Setup of the project
+### Setup of the project for local development
 
 ```
 $ git clone git@github.com:stefanjudis/today-i-learned.git
@@ -42,7 +38,7 @@ $ npm i
 $ mv .env.sample .env
 ```
 
-Edit `.env` to include
+Edit the `.env` to include Contentful credentials of the space you created for the initial flow.
 
 ```
 REACT_APP_CTF_SPACE=...
