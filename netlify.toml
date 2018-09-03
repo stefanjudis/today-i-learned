@@ -8,5 +8,5 @@
 
 [template.environment]
   REACT_APP_CTF_SPACE = "Contentful Space ID"
-  REACT_APP_CTF_CMA_TOKEN = "Contentful Content Management Token"
   REACT_APP_CTF_CDA_TOKEN = "Contentful Content Delivery token"
+  REACT_APP_CTF_CMA_TOKEN = "Contentful Content Management Token"
