@@ -57,8 +57,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -68,8 +67,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -79,8 +77,7 @@
           "type": "Date",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -90,8 +87,7 @@
           "type": "Text",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -103,9 +99,7 @@
           "required": false,
           "validations": [
             {
-              "linkContentType": [
-                "category"
-              ]
+              "linkContentType": ["category"]
             }
           ],
           "disabled": false,
@@ -171,8 +165,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -182,8 +175,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -193,8 +185,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -258,8 +249,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -269,8 +259,7 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -280,8 +269,7 @@
           "type": "Text",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
@@ -2052,62 +2040,7 @@
       }
     }
   ],
-  "webhooks": [
-    {
-      "name": "Netlify - Deploy a site",
-      "url": "https://api.netlify.com/build_hooks/5b84262c67610c505ceed0c7",
-      "httpBasicUsername": null,
-      "topics": [
-        "Entry.publish",
-        "Asset.publish",
-        "Entry.unpublish",
-        "Asset.unpublish"
-      ],
-      "filters": [
-        {
-          "equals": [
-            {
-              "doc": "sys.environment.sys.id"
-            },
-            "master"
-          ]
-        }
-      ],
-      "transformation": {
-        "contentType": "application/json"
-      },
-      "sys": {
-        "type": "WebhookDefinition",
-        "id": "6TFCMM4QvHvqduob8mAzQ4",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "3rj6js5xm0db"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6dV4yzcXnTFJpBQNTwolmx"
-          }
-        },
-        "createdAt": "2018-08-27T16:26:33Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6dV4yzcXnTFJpBQNTwolmx"
-          }
-        },
-        "updatedAt": "2018-08-27T16:26:33Z"
-      },
-      "headers": [
-      ]
-    }
-  ],
+  "webhooks": [],
   "roles": [
     {
       "name": "Author",
@@ -2115,9 +2048,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2133,9 +2064,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2151,9 +2080,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2169,9 +2096,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2187,9 +2112,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2205,9 +2128,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2223,15 +2144,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
       },
       "sys": {
         "type": "Role",
@@ -2268,9 +2184,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2286,9 +2200,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2304,14 +2216,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
+        "ContentModel": ["read"],
+        "Settings": [],
         "ContentDelivery": "all",
-        "Environments": [
-        ]
+        "Environments": []
       },
       "sys": {
         "type": "Role",
@@ -2380,15 +2288,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
       },
       "sys": {
         "type": "Role",
@@ -2425,9 +2328,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2443,9 +2344,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "create"
-          ],
+          "actions": ["create"],
           "constraint": {
             "and": [
               {
@@ -2461,9 +2360,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2487,9 +2384,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2520,9 +2415,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "delete"
-          ],
+          "actions": ["delete"],
           "constraint": {
             "and": [
               {
@@ -2546,9 +2439,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2572,9 +2463,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2605,9 +2494,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "delete"
-          ],
+          "actions": ["delete"],
           "constraint": {
             "and": [
               {
@@ -2631,15 +2518,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
       },
       "sys": {
         "type": "Role",
@@ -2676,9 +2558,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2694,9 +2574,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2712,9 +2590,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2737,9 +2613,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2762,15 +2636,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
       },
       "sys": {
         "type": "Role",
@@ -2807,9 +2676,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2825,9 +2692,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2843,9 +2708,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2868,9 +2731,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2893,15 +2754,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
       },
       "sys": {
         "type": "Role",
@@ -2938,9 +2794,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2956,9 +2810,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "read"
-          ],
+          "actions": ["read"],
           "constraint": {
             "and": [
               {
@@ -2974,9 +2826,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -2999,9 +2849,7 @@
         },
         {
           "effect": "allow",
-          "actions": [
-            "update"
-          ],
+          "actions": ["update"],
           "constraint": {
             "and": [
               {
@@ -3024,15 +2872,10 @@
         }
       ],
       "permissions": {
-        "ContentModel": [
-          "read"
-        ],
-        "Settings": [
-        ],
-        "ContentDelivery": [
-        ],
-        "Environments": [
-        ]
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": []
       },
       "sys": {
         "type": "Role",
