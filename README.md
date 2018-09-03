@@ -48,7 +48,7 @@ REACT_APP_CTF_CPA_TOKEN=...
 
 ### npm start
 
-`npm start` will start a new development server with hot reloading. The cool thing about this command is that the React applications knows that you are in development and uses the Content Preview API. This means, that you will see unpublished and updated data in development which is great to evaluate content changes.
+`npm start` will start a new development server with hot reloading. The cool thing about this command is that the React applications knows that you are in development and uses the [Content Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/). This means, that you will see unpublished and updated data in development which is great to evaluate content changes.
 
 ### npm run build
 
