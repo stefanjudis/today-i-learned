@@ -85,9 +85,9 @@ class Home extends Component {
             </p>
             <p>
               And maybe (just maybe)... you want to share your learnings, too,
-              because what you'll learn over time is that nobody knows everybody
-              and that every learning from your perspective can be new to
-              someone else.
+              because what you'll learn over time is that nobody knows
+              everything and that every learning from your perspective can be
+              completely new to someone else.
             </p>
           </Card>
 
