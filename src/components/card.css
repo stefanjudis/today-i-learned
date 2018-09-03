@@ -36,12 +36,8 @@
   overflow: hidden;
 }
 
-.c-card:hover {
-  transform: translate(0, -2px);
-}
-
 .c-card:hover::before {
-  transform: scaleX(0.98) translate(0, -0.75em);
+  transform: scaleX(0.98) translate(0, -0.25em);
 }
 
 .c-cardHeader {

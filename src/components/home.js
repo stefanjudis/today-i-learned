@@ -96,7 +96,7 @@ class Home extends Component {
             {Object.entries(categories).map(
               ([categorySlug, { category, posts }]) => (
                 <li key={categorySlug}>
-                  <Card limited={true}>
+                  <Card>
                     <CardHeader className={`o-gradient-${categorySlug}`}>
                       {category.fields.title}
                       <img
