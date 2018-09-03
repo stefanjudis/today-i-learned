@@ -26,6 +26,7 @@
     "react-scripts": "1.1.4"
   },
   "reactSnap": {
-    "cacheAjaxRequests": true
+    "cacheAjaxRequests": true,
+    "preconnectThirdParty": false
   }
 }
