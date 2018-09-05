@@ -21,7 +21,7 @@ Contentful’s content infrastructure is a set of APIs to read, write and previe
 
 ### [Netlify](https://www.netlify.com) – your CI service and hoster
 
-Netlify enables an all-in-one workflow that combines global deployment, continuous integration, and automatic HTTPS.
+Netlify allows you to develop and host your Contenful sites without needing a webserver. Netlify is a global application delivery network that pairs perfectly with the Contentful APIs. Build templates with your favorite site generator, manage the content in Contentful, and allow Netlify automatically build and distribute your site each time there's an update. Since there are no servers, sites are performant, maintenance free, and secure.
 
 ## Project setup and initial deploy using the Netlify Deploy Button
 
